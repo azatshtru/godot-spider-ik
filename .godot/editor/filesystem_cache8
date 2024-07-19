@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1721354178
+icon.svg::CompressedTexture2D::5846390582968231026::1720512690::1720512701::1::::<><>::
+::res://addons/::1720712128
+::res://addons/simple_ik/::1721226817
+bone.gd::GDScript::-1::1720729660::0::1::::IKBone3D<>MeshInstance3D<>::
+icon.png::CompressedTexture2D::283525416654149660::1720714198::1720714464::1::::<><>::
+ik_controller.gd::GDScript::-1::1721226817::0::1::::IKBasicLimb3D<>Node3D<>::
+plugin.cfg::TextFile::-1::1720712271::0::1::::<><>::
+simple_ik.gd::GDScript::-1::1720739650::0::1::::<>EditorPlugin<>::
+::res://scenes/::1721326236
+main.tscn::PackedScene::163933664733819331::1721326236::0::1::::<><>::uid://bnlp4uwq1tc4v::::res://scenes/spider.tscn
+spider.tscn::PackedScene::3322547434412080175::1721326236::0::1::::<><>::res://scripts/spider.gd
+::res://scripts/::1721306860
+spider.gd::GDScript::-1::1721306860::0::1::::<>Node3D<>::

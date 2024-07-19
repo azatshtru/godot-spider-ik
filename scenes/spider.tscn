@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnlp4uwq1tc4v"]
+
+[ext_resource type="Script" path="res://scripts/spider.gd" id="1_p55sj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wv1gj"]
+
+[node name="Spider" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+script = ExtResource("1_p55sj")
+
+[node name="SpiderBody" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.1, -3.83666e-16, 3.83666e-16, 3.83666e-16, 1.1, -3.83666e-16, -3.83666e-16, 3.83666e-16, 1.1, 2.08165e-12, 1, 2.08165e-12)
+mesh = SubResource("BoxMesh_wv1gj")
+
+[node name="SpiderHead" type="MeshInstance3D" parent="SpiderBody"]
+transform = Transform3D(0.545455, 3.47301e-22, -3.4902e-22, -3.4902e-22, 0.545455, 3.4902e-22, 3.47301e-22, -3.47301e-22, 0.545455, 2.41127e-16, 0, -0.690909)
+mesh = SubResource("BoxMesh_wv1gj")
+skeleton = NodePath("../..")
