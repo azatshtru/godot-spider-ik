@@ -18,6 +18,8 @@ var odd: bool = false
 
 var state = "none"
 
+var leg_z
+
 func _ready():
 	for i in range(2*limb_count):
 		var limb = IKBasicLimb3D.new()
@@ -41,7 +43,7 @@ func calculate_limb_targets():
 		var limb_target = Vector3(
 			central_position.x+2.5*abs(cos(angle))*(1 if i%2 else -1),
 			0,
-			central_position.z-3*abs(sin(angle)))
+			central_position.z-3*(leg_z)*abs(sin(angle)))
 		limb_target = (limb_target - central_position).rotated(Vector3.UP, basis_rotation) + central_position
 		limb_targets[i] = limb_target
 	
@@ -71,6 +73,7 @@ func chase_target(delta):
 func _process(delta):
 	var movement = Input.get_axis("back", "forward")
 	position -= movement * delta * (body_move_speed + (randf_range(0, speed_multiplier-1.5))) * basis.z
+	leg_z = movement + 0.5
 	
 	var y_rotation = Input.get_axis("left", "right")
 	rotation.y -= y_rotation * delta * 2 * PI/2
